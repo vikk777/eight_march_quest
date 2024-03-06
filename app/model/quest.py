@@ -13,6 +13,8 @@ class Quest():
         self.units.append(UnitModel(len(self.units), 'большой куш', hint='Пёсиков любишь?'))
         self.units.append(UnitModel(len(self.units), 'терминатор', hint='Киборг-убийца'))
         self.units.append(UnitModel(len(self.units), 'властелин колец'))
+        self.units.append(UnitModel(len(self.units), 'гравитация', hint='В чем сила, брат?'))
+        self.units.append(UnitModel(len(self.units), 'фильмец'))
 
     def getUnit(self, id):
         return self.units[id]
