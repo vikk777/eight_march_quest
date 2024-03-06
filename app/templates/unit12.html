@@ -1,0 +1,23 @@
+{% extends "unit.html" %}
+
+{% block unitHeader %}Кулхацкер{% endblock unitHeader %}
+{% block unitQuestion %}Хароооош!!1!{% endblock unitQuestion %}
+
+{% block unitBody %}
+    <div class="text-center pt-3">
+        <img src="https://external-preview.redd.it/w7qd2VL8mdWMDv9K52STySz4ePOEbx9EOB9jB1qmz-0.jpg?width=960&crop=smart&auto=webp&s=02c0f63fe5339a0d26290a649d911b5c3685ec7a" class="img-fluid">
+    </div>
+    <h5 class="text-center pt-3">Теперь загляни в блокнот! Не кажется ли он тебе подозрительным? Что там? ТОЛЬКО НЕ СПЕШИ ВВОДИТЬ ОТВЕТ!</h5>
+{% endblock unitBody %}
+
+{% block unitHint %}
+    <div id="hintContainer" class="d-none">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
+            Подсказка
+        </button>
+
+        <div id="hint" class="collapse">
+            <p>Используй <code>карандаш</code>!</p>
+        </div>
+    </div>
+{% endblock unitHint %}

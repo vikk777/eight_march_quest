@@ -14,7 +14,7 @@ class UnitModel():
         return self.form
 
     def check(self, pwd=None):
-        if self.pwd != pwd.lower():
+        if self.pwd != pwd:
             raise WrongPwdError
 
         return True

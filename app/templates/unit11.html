@@ -1,0 +1,22 @@
+{% extends "unit.html" %}
+
+{% block unitHeader %}Кулхацкер{% endblock unitHeader %}
+{% block unitQuestion %}Отличная работа! Остался последний шаг до того, чтобы стать крутым хацкером!{% endblock unitQuestion %}
+
+{% block unitBody %}
+    <div class="text-center pt-3">
+        <h5>Скачай <a href="{{ url_for('static', filename='task/task.zip') }}">этот</a> архив!</h5>
+    </div>
+{% endblock unitBody %}
+
+{% block unitHint %}
+    <div id="hintContainer" class="d-none">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
+            Подсказка
+        </button>
+
+        <div id="hint" class="collapse">
+            <p>Чтож, придется лезть в исходный код, ничего не попишешь...</p>
+        </div>
+    </div>
+{% endblock unitHint %}

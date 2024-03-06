@@ -15,6 +15,13 @@ class Quest():
         self.units.append(UnitModel(len(self.units), 'властелин колец'))
         self.units.append(UnitModel(len(self.units), 'гравитация', hint='В чем сила, брат?'))
         self.units.append(UnitModel(len(self.units), 'фильмец'))
+        self.units.append(UnitModel(len(self.units), 'P4$$W0rD'))
+        self.units.append(UnitModel(len(self.units), 'ZWI0YWFlMTBjOGMyZTNlMDc5MDcyMGRmNTAwNDc4NzQ4YjM3YjMzOQ=='))
+        self.units.append(UnitModel(len(self.units), 'Vasfs'))
+        self.units.append(UnitModel(len(self.units), 'You are breathtaking, Hackerman!'))
+        self.units.append(UnitModel(len(self.units), 'руслан'))
+        self.units.append(UnitModel(len(self.units), 'skip'))
+        self.units.append(UnitModel(len(self.units), 'skip'))
 
     def getUnit(self, id):
         return self.units[id]

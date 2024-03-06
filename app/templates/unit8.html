@@ -1,0 +1,25 @@
+{% extends "unit.html" %}
+
+{% block unitHeader %}Кулхацкер{% endblock unitHeader %}
+{% block blockDescription %}В этом блоке ты побудешь в роли мамкиного хацкера{% endblock blockDescription %}
+{% block unitQuestion %}Мы перехватили логин и пароль, который передавался небезопасным способом. Какой пароль?{% endblock unitQuestion %}
+
+{% block unitBody %}
+    <div class="text-center pt-3">
+        <h5>Вот пара логин:пароль</h5>
+        <code class="h5">YWRtaW46UDQkJFcwckQ=</code>
+    </div>
+{% endblock unitBody %}
+
+{% block unitHint %}
+    <div id="hintContainer" class="d-none">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
+            Подсказка
+        </button>
+
+        <div id="hint" class="collapse">
+            <p>Возможно, это кодирование в <code>Base64</code>.</p>
+            <p>Тебе поможет <a href="https://cyberchef.org/">Кибершеф</a></p>
+        </div>
+    </div>
+{% endblock unitHint %}

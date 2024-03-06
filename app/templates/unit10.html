@@ -1,0 +1,20 @@
+{% extends "unit.html" %}
+
+{% block unitHeader %}Кулхацкер{% endblock unitHeader %}
+{% block unitQuestion %}Pmttw! Q iu bmfb kqxpmzml jg Kmhiz kqxpmz. Epib qa gwcz vium? Q ikkmxb ivaemz kqxpmzml jg Kmhiz kqxpmz wvtg!{% endblock unitQuestion %}
+
+{% block unitBody %}
+{% endblock unitBody %}
+
+{% block unitHint %}
+    <div id="hintContainer" class="d-none">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
+            Подсказка
+        </button>
+
+        <div id="hint" class="collapse">
+            <p>Хм, похоже на шифр Цезаря, также известный как <code>ROT13</code>. Только вот смещение, возможно, не 13...</p>
+            <p>Тебе поможет <a href="https://cyberchef.org/">Кибершеф</a></p>
+        </div>
+    </div>
+{% endblock unitHint %}

@@ -1,0 +1,24 @@
+{% extends "unit.html" %}
+
+{% block unitHeader %}Кулхацкер{% endblock unitHeader %}
+{% block unitQuestion %}Чтобы надежно передавать и хранить пароли, их нужно <code>хэшировать</code>. Захэшируй этот пароль в <code>SHA1</code>, после чего закодируй пару логин:пароль в <code>Base64</code>{% endblock unitQuestion %}
+
+{% block unitBody %}
+    <div class="text-center pt-3">
+        <h5>Вот пара логин:пароль</h5>
+        <h5><code>admin:P4$$W0rD</code></h5>
+    </div>
+{% endblock unitBody %}
+
+{% block unitHint %}
+    <div id="hintContainer" class="d-none">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
+            Подсказка
+        </button>
+
+        <div id="hint" class="collapse">
+            <p>Тебе поможет <a href="https://cyberchef.org/">Кибершеф</a></p>
+            <p>Тебе нужен раздел <code>Hashing</code>.</p>
+        </div>
+    </div>
+{% endblock unitHint %}

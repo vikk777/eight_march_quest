@@ -24,6 +24,7 @@
                 </div>
             </div>
 
+            {% block unitHint %}
             {% if unit.hint %}
             <div id="hintContainer" class="d-none">
                 <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#hint" aria-expanded="false" aria-controls="collapseExample">
@@ -35,6 +36,7 @@
                 </div>
             </div>
             {% endif %}
+            {% endblock unitHint %}
 
         </div>
     </section>
