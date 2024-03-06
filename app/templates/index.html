@@ -1,0 +1,23 @@
+{% extends "base_page.html" %}
+
+{% block styles %}
+    {{ super() }}
+{% endblock styles %}
+
+{% block content %}
+    <section class="pt-5">
+        <div class="container text-center pt-3 pb-3 rounded-4">
+            <h1>Доброе утро, Заюша!</h1>
+            <h4 class="pt-3">Поздравляю тебя с 8 марта!</h4>
+            <h5 class="pt-3">Я приготовил тебе подарочек, но чтобы его получить, тебе нужно пройти квест :)</h5>
+            <p class="pt-3">
+                <a href="{{ url_for('getUnit', id=0) }}" class="btn btn-primary">Жми, чтобы начать</a>
+            </p>
+        </div>
+    </section>
+{% endblock content %}
+
+{% block scripts %}
+    {{ super() }}
+{% endblock scripts %}
+

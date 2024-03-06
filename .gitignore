@@ -1,0 +1,7 @@
+*.sublime-*
+*__pycache__*
+quest
+run.sh
+run.ps1
+app/static/photo
+node_modules/
