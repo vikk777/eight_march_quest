@@ -1,6 +1,10 @@
 import {Unit} from './modules/unit.js'
 
-let unit = new Unit('#unit');
+let unit;
+
+if ($('#unit').length) {
+    unit = new Unit('#unit');
+}
 
 let hint = $('#hintContainer');
 

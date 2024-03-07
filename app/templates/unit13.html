@@ -1,7 +1,72 @@
 {% extends "unit.html" %}
 
+{% block styles %}
+    {{ super() }}
+    <link type="text/css" href="{{ url_for('static', filename='less/unit13.less') }}" rel="stylesheet/less">
+{% endblock styles %}
+
 {% block unitHeader %}Новичок{% endblock unitHeader %}
-{% block unitQuestion %}О боже, нет! Это бомба! Нужно ее обезвредить, скорее! У тебя 10 минут!{% endblock unitQuestion %}
+{% block unitQuestion %}О боже, нет! Это бомба! Нужно ее обезвредить, скорее! У тебя 5 минут!{% endblock unitQuestion %}
 
 {% block unitBody %}
+    <div class="row">
+        <h5>Вот показания свидетелей (один из них <code>лжет</code>):</h5>
+        <ul class="list-group">
+            <li class="list-group-item">
+                Джон говорит, что надо резать <code>красный</code> или <code>желтый</code> провод
+            </li>
+            <li class="list-group-item">
+                Мэри говорит, что не надо резать <code>зеленый</code> или <code>синий</code> провод
+            </li>
+            <li class="list-group-item">
+                Пол говорит, что нужно резать <code>красный</code> или <code>синий</code> провод
+            </li>
+            <li class="list-group-item">
+                Алиса говорит, что <code>Пол</code> лжет
+            </li>
+        </ul>
+    </div>
+
+    <div id="bombContainer" class="row justify-content-center pt-3">
+        <div class="col" id="red">
+            <img src="https://www.celloexpress.co.uk/wp-content/uploads/2021/06/2mm-x-5m-Red-Wire-webby.jpg" class="img-fluid">
+        </div>
+        <div class="col" id="yellow">
+            <img src="https://www.gaugemasterretail.com/magento/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/g/m/gm11y.jpg" class="img-fluid">
+        </div>
+        <div class="col" id="green">
+            <img src="https://www.celloexpress.co.uk/wp-content/uploads/2021/01/1.5mm-x-10m-Green-Wire-webby.jpg" class="img-fluid">
+        </div>
+        <div class="col" id="blue">
+            <img src="https://www.celloexpress.co.uk/wp-content/uploads/2021/01/1.5mm-x-10m-Deep-Sky-Blue-Wire-webby.jpg" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-6 text-center">
+            <h5 id="timer" class="pt-5 text-danger"></h5>
+            <h4 id="successText" class="pt-3 d-none">Фух, пронесло :)</h4>
+        </div>
+    </div>
+
 {% endblock unitBody %}
+
+{% block unitForm %}
+{% endblock unitForm %}
+
+{% block scripts %}
+    <div id="blackScreen" class="text-bg-dark position-absolute d-none">
+        <div id="blackScreen_textContainer" class="container bg-transparent h-100 d-none">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-6 text-center">
+                    <h1>BOOM</h1>
+                    <h3>Начать с начала?</h3>
+                    <button class="btn btn-primary" id="blackScreen_btn">Начать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ super() }}
+    <script type="module" src="{{ url_for('static', filename='js/modules/unit13.js') }}"></script>
+{% endblock scripts %}
+

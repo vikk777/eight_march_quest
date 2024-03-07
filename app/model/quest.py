@@ -16,12 +16,12 @@ class Quest():
         self.units.append(UnitModel(len(self.units), 'гравитация', hint='В чем сила, брат?'))
         self.units.append(UnitModel(len(self.units), 'фильмец'))
         self.units.append(UnitModel(len(self.units), 'P4$$W0rD'))
-        self.units.append(UnitModel(len(self.units), 'ZWI0YWFlMTBjOGMyZTNlMDc5MDcyMGRmNTAwNDc4NzQ4YjM3YjMzOQ=='))
+        self.units.append(UnitModel(len(self.units), 'YWRtaW46NTZkMjkwMDc4NzY1NjI2MjI2ZGU4MzRkZDVlNGY4YmFjZDllZjcyMQ=='))
         self.units.append(UnitModel(len(self.units), 'Vasfs'))
         self.units.append(UnitModel(len(self.units), 'You are breathtaking, Hackerman!'))
         self.units.append(UnitModel(len(self.units), 'руслан'))
         self.units.append(UnitModel(len(self.units), 'skip'))
-        self.units.append(UnitModel(len(self.units), 'skip'))
+        self.units.append(UnitModel(len(self.units), 'let me out'))
 
     def getUnit(self, id):
         return self.units[id]
@@ -29,7 +29,7 @@ class Quest():
 
     def checkUnit(self, *args, id=None, **kwargs):
         # if id != self.current:
-        #     raise QuestError
+            # raise QuestError
 
         if self.units[id].check(*args, **kwargs):
             self.current = id + 1

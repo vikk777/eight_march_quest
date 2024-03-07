@@ -12,17 +12,19 @@
             <h1 class="text-center">Квест "Восьмимартие для Ди"</h1>
 
             <h2 class="pt-3 text-center">{% block unitHeader %}{% endblock unitHeader %}</h2>
-            <h3 class="pt-3 text-center">{% block blockDescription %}{% endblock blockDescription %}</h2>
-            <h3 class="pt-3 text-center">{% block unitQuestion %}{% endblock unitQuestion %}</h2>
+            <h3 class="pt-3 text-center">{% block blockDescription %}{% endblock blockDescription %}</h3>
+            <h4 class="pt-3 text-center">{% block unitQuestion %}{% endblock unitQuestion %}</h4>
 
             {% block unitBody %}
             {% endblock unitBody %}
 
+            {% block unitForm %}
             <div class="row justify-content-center pt-3">
                 <div class="col-6">
                     {{ mForms.renderFormGroup(form, url_for('checkUnit', id=unit.id), id='unit', submits=[mButtons.answer]) }}
                 </div>
             </div>
+            {% endblock unitForm %}
 
             {% block unitHint %}
             {% if unit.hint %}
