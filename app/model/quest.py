@@ -24,16 +24,12 @@ class Quest():
         self.units.append(UnitModel(len(self.units), 'let me out'))
 
     def getUnit(self, id):
+        self.current = id
         return self.units[id]
-        # return self.units[min(self.current, id)]
 
     def checkUnit(self, *args, id=None, **kwargs):
-        # if id != self.current:
-            # raise QuestError
-
         if self.units[id].check(*args, **kwargs):
             self.current = id + 1
-            # self.current += 1
             return url_for('checkUnit', id=self.current) if self.current != len(self.units) else url_for('congrads')
 
     def unitForm(self, id):
